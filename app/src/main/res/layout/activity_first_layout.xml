@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstLayout">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lay4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- First container for gym -->
+
+        <!-- Second container for meditation -->
+
+        <!-- Third container for focus -->
+
+        <LinearLayout
+            android:id="@+id/gym_container"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="204dp"
+
+            android:background="@drawable/gym8"
+            android:clickable="true"
+
+            android:onClick="openGymActivity"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:text="Gym"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/meditation_container"
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            android:layout_below="@id/gym_container"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/medi1"
+            android:clickable="true"
+            android:onClick="openMeditationActivity"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_bg"
+
+                android:src="@drawable/meditation_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:text="Meditation"
+                android:textColor="@color/black"
+                android:textSize="33sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/focus_container"
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            android:layout_below="@id/meditation_container"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/focus3"
+            android:clickable="true"
+            android:onClick="openFocusActivity"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/focus_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:text="Focus"
+                android:textColor="@color/black"
+                android:textSize="39sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="113dp"
+            android:layout_marginBottom="610dp"
+            android:background="@drawable/meditation2"
+            android:gravity="center"
+            android:text="MEDIVERSE"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="274dp"
+            android:layout_marginEnd="49dp"
+            android:drawableLeft="@drawable/logout"
+            android:contentDescription="button"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
